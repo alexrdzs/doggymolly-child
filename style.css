@@ -1,0 +1,251 @@
+/*
+Theme Name:   	Storefront Child - Doggy Molly Mall Edition
+Theme URI:    	https://github.com/stuartduff/storefront-child-theme
+Author:       	Alex Rodríguez S.
+Author URI:     http://alexrds.com
+Template:     	storefront
+Description:  	This is a blankish child theme for WooThemes StoreFront theme
+Version:      	1.0.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	storefront
+Tags:         	two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
+Images License: GNU General Public License v2 or later
+*/
+
+/*
+ * Add your own custom css below this text.
+ */
+
+.primary-navigation {
+    float: right;
+
+}
+
+
+@media (min-width: 768px) {
+    .storefront-primary-navigation {
+        clear: none;
+        background: inherit;
+        float: right;
+        margin-left: inherit;
+        margin-right: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        width: 680px;
+    }
+    .navigation {
+        width: 100%;
+    }
+    .woocommerce-active .site-header .main-navigation {
+        width: 70%;
+    }
+    .col-full {
+        max-width: 1096px;
+        padding: 0;
+    }
+}
+
+/* Remove header */
+
+header#masthead {
+    margin-bottom: 0;
+
+}
+
+
+
+
+
+
+.front-page-main-image {
+    height: 450px;
+}
+
+.view-products-button span {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+div#pg-8-0,
+div#pg-8-1 {
+    margin-bottom: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.added_to_cart,
+.widget a.button,
+.site-header-cart .widget_shopping_cart a.button {
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+/***************/
+
+/*GOOGLE FONTS*/
+
+h1,
+h2,
+h3,
+.widget-title,
+.order-total,
+.wc-proceed-to-checkout,
+.count {
+    font-family: 'Fredoka One', cursive !important;
+}
+
+
+h4,
+h5,
+h6,
+body,
+button,
+input,
+textarea,
+    {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+
+/* FONT SIZES */
+
+.featurette {
+
+    margin: 25px;
+}
+
+.featurette-heading {
+    font-size: 2.5em;
+}
+
+
+ul.products li.product .woocommerce-loop-product__title,
+ul.products li.product h2,
+ul.products li.product h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0em;
+    color: #3d3d3d;
+}
+
+ul.products li.product.product-category .woocommerce-loop-category__title,
+ul.products li.product.product-category h2,
+ul.products li.product.product-category h3 {
+    font-size: 1.5em;
+}
+
+
+/**** GENERALES **** /
+
+/** MENSAJE */
+
+.woocommerce-message {
+    background-color: #66cc66 !important;
+}
+
+
+
+/*CHANGE CATEGORY ICON SIDEBAR*/
+
+.widget_categories > ul > li:before {
+    content: "\f105";
+}
+
+.widget_recent_entries li:before {
+    content: "\f196";
+}
+
+.widget_nav_menu ul li:before {
+    display: none;
+}
+
+
+
+/* Cambio de primer botón - tarjeta */
+
+.storefront-handheld-footer-bar ul li.home > a:before {
+    content: "\f09d";
+}
+
+/* Badge verde en Botón de carrito en mobile */
+
+.wc-proceed-to-checkout .button,
+.storefront-handheld-footer-bar ul li.cart .count,
+woocommerce-cart-tab__contents {
+    background-color: #66cc66 !important;
+}
+
+
+/**** HEADER ***** /
+/* CART AMOUNT FONT + ICON */
+
+.site-header-cart .cart-contents .amount {
+    font-family: 'Fredoka One', cursive !important;
+}
+
+.site-header-cart .cart-contents:after,
+.storefront-handheld-footer-bar ul li.cart > a:before {
+    content: "\f07a";
+}
+
+@media screen and (min-width: 768px) {
+    .site-header .site-branding,
+    .site-header .site-logo-anchor,
+    .site-header .site-logo-link {
+        width: 30% !important;
+        /* Use px values if you want, eg. 350px */
+    }
+}
+
+/**** HOMEPAGE ***/
+
+/* MARGIN BOTTOM CATEGORY SECTION TITLES */
+
+.storefront-product-section .section-title {
+    margin-bottom: 5px;
+}
+
+/** Background color **/
+
+/* Altura de productos para alinear boton de carrito */
+
+li.type-product a:first-child {
+    min-height: 200px;
+    display: block;
+}
+
+/* Botón de "ON SALE" */
+
+ul.products li.product .onsale {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    color: #fff;
+    font-weight: 600;
+    background-color: #66cc66;
+    border: 0;
+}
+
+/*** Top bar ***/
+
+#topbar {
+    background-color: #1F1F20;
+    height: 40px;
+    line-height: 40px;
+}
+
+#topbar p {
+    color: #fff;
+}
