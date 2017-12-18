@@ -55,49 +55,96 @@ function remove_storefront_header_search() {
 }
 
 
-/*** TOP BAR HOME PAGE ***/
+/*** Sección Banner Superior ***/
 
 function storefront_add_topbar() {
     ?>
- 
+
         <div id="topbar" class="col-12">
             <div style="text-align: center; background: #DFEFF5; color: #3d3d3d; font-weight: bold; font-size:1em; height:10vh;">
                 <div class="col-md-4"></div>
-                <div class="col-md-2">1 Get 25% off your first order!</div>
-                <div class="col-md-2"><span style="margin: 0 1em;">2 Check out our new Jackets!</span></div>
+                <div class="col-sm-6 col-md-2">1 Get 25% off your first order!</div>
+                <div class="col-sm-6 col-md-2"><span style="margin: 0 1em;">2 Check out our new Jackets!</span></div>
                 <div class="col-md-4"></div>
 
 
             </div>
         </div>
-         <?php
+        <?php
 }
 add_action( 'storefront_before_header', 'storefront_add_topbar' );
 
-/// ADD SECTION AFTER FEATURED ///
+/// Nueva sección después de FEATURED ///
             add_action('storefront_homepage_after_featured_products', 'custom_storefront_section1');
 
 function custom_storefront_section1(){ ?>
-	
+
             <div class="clearfix"></div>
-    <section>
+            <section>
 
-        <div class="row featurette">
-            <div class="col-md-7 col-md-push-5" style="padding:35px; background:#d8f3d8;">
-                <h2 class="featurette-heading">Oh yeah, it's that good. <br><span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 col-md-pull-7">
-                <img class="featurette-image img-responsive center-block" src="https://placeimg.com/280/280/animals" alt="Generic placeholder image">
-            </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette" style=" margin:25px 0;">
+                    <div class="col-md-7 col-md-push-5" style="padding:35px;">
+                        <h2 class="featurette-heading" style="color:#96588a;">Oh yeah, it's that good. <br><span class="text-muted">See for yourself.</span></h2>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 col-md-pull-7">
+                        <img class="featurette-image img-responsive center-block" src="https://placeimg.com/280/280/animals" alt="Generic placeholder image">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <section class="storefront-product-section storefront-moreinfo" aria-label="Featured Products">
+                    <div class="sp-section-description">
+
+
+
+                        <div class="row featurette">
+                            <div class="col-md-12" style="padding:25px;">
+                                <h2 class="section-title">Meet our <span class="text-muted">furr</span>riends!</h2>
+                                <div class="sp-section-description">
+                                    <p>These are some pics from social media. Use <a href="">#mollysfriends</a> to be featured!</p>
+                                </div>
+
+                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+            </section>
+
+            <?php }
+
+/*** Sección abajo del Header ***/
+function tdmm_storefront_homepage_slider() {
+ 
+    // if not the StoreFront Homepage Page Template return false
+    if ( ! is_page_template( 'template-homepage.php' ) ) {
+ 
+        return false;
+ 
+    }
+     
+    echo ( ' <div class="jumbotron" style="padding:25px;">
+       
+        <div class="container">
+            <h1>Hello, world!</h1>            
+
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
         </div>
+    </div>' );
+ 
+}
+add_action( 'storefront_before_content', 'tdmm_storefront_homepage_slider', 5 );
 
-        <hr class="featurette-divider">
-    </section>
-  
-<?php }
-
-/** Cambio del menú en mobile **/
+/** Cambios del menú en mobile **/
 
 add_filter( 'storefront_handheld_footer_bar_links', 'jk_remove_handheld_footer_links' );
 function jk_remove_handheld_footer_links( $links ) {
@@ -124,5 +171,16 @@ function jk_home_link() {
 	echo '<a href="' . esc_url( home_url( '/checkout' ) ) . '">' . __( 'Home' ) . '</a>';
 }
 
-/*** HIDE COUNT **/
+/*** Esconde el contador de productos **/
 add_filter( 'woocommerce_subcategory_count_html', '__return_null' );
+
+        
+/* Define cuántas categorías se ven en el homepage */
+add_filter( 'storefront_product_categories_args', 'tdmm_storefront_product_categories', 199 );
+ 
+function tdmm_storefront_product_categories( $args ) {
+ $args['limit']   = 20;
+ $args['columns'] = 5;
+ 
+ return $args;
+}
