@@ -61,10 +61,6 @@ header#masthead {
 }
 
 
-
-
-
-
 .front-page-main-image {
     height: 450px;
 }
@@ -219,6 +215,7 @@ woocommerce-cart-tab__contents {
     .site-header .site-logo-anchor,
     .site-header .site-logo-link {
         width: 30% !important;
+        margin-bottom: 15px;
         /* Use px values if you want, eg. 350px */
     }
 }

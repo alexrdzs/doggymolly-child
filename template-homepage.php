@@ -26,7 +26,16 @@ get_header(); ?>
 
         </div>
     </div>
--->
+
+<div class="jumbotron" style="margin: 15px; padding:25px;">
+       
+        <div class="container">
+            <h1>Hello, world!</h1>            
+
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div> -->
 
 
 
@@ -59,6 +68,26 @@ do_action('homepage');
 
 
     <div class="clearfix"></div>
+    <hr class="featurette-divider">
+
+<section class="storefront-product-section storefront-moreinfo" aria-label="Featured Products">
+                    <div class="sp-section-description">
+
+
+
+                        <div class="row featurette">
+                            <div class="col-md-12" style="padding:25px;">
+                                <h2 class="section-title">Meet our <span class="text-muted">furr</span>riends!</h2>
+                                <div class="sp-section-description">
+                                    <p>These are some pics from social media. Use <a href="">#mollysfriends</a> to be featured!</p>
+                                </div>
+
+                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
 
     <hr class="featurette-divider">
 
