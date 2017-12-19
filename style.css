@@ -5,7 +5,7 @@ Author:       	Alex Rodríguez S.
 Author URI:     http://alexrds.com
 Template:     	storefront
 Description:  	This is a blankish child theme for WooThemes StoreFront theme
-Version:      	1.0.2
+Version:      	1.0.5 - 19 12 2017
 License:      	GNU General Public License v2 or later
 License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  	storefront
@@ -308,3 +308,25 @@ path.woocommerce-cart-tab__icon-bag {
     padding: 0;
 }
 ***/
+
+/*** CATEGORY STYLE **/
+
+
+.category-heading {
+    font-size: 3.5em;
+    color: #66cc66;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.category-subheading{
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.woocommerce-breadcrumb{
+    margin-bottom: .5em !important;
+}
+
+.woocommerce-pagination{
+    margin-top:-60px;
+}
