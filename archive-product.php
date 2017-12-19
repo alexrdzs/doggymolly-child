@@ -45,11 +45,11 @@ get_header( 'shop' );
 			$taxonomy_term = $obj->slug;
 			
 			// Product Taxonomy Archive
-			echo do_shortcode('[ajax_load_more post_type="product" taxonomy="'. $taxonomy .'" taxonomy_terms="'. $taxonomy_term .'" taxonomy_operator="IN" css_classes="products" posts_per_page="3" transition="fade"]');
+			echo do_shortcode('[ajax_load_more post_type="product" taxonomy="'. $taxonomy .'" taxonomy_terms="'. $taxonomy_term .'" taxonomy_operator="IN" css_classes="products" posts_per_page="15" transition="fade" button_label="Load more" button_loading_label="Loading..."]');
 		} else {
 		
 			// Shop Landing Page
-			echo do_shortcode('[ajax_load_more post_type="product" css_classes="products" posts_per_page="6" transition="fade"]');
+			echo do_shortcode('[ajax_load_more post_type="product" css_classes="products" posts_per_page="15" transition="fade" button_label="Load more" button_loading_label="Loading..."]');
 		}
 		?>
 	
