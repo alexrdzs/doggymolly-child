@@ -77,7 +77,7 @@ endwhile; else: ?>
                 <?php the_field('titulo-interlinking'); ?> 
             </h2>
             <p class="text-muted lead text-center">
-                <?php the_field('subtitulo-interlinking'); ?> Lorem IpsumLorem Ipsum
+                <?php the_field('subtitulo-interlinking'); ?>
             </p>
               
             
