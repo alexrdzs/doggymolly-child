@@ -119,7 +119,7 @@ function custom_storefront_section1(){ ?>
                         <p class="lead"><?php the_field('texto_secundario');?></p>
                     </div>
                     <div class="col-md-5 col-md-pull-7">
-                        <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_secundaria');?>" alt="<?php the_field('descripcion_imagen_secundaria'); ?>">
+                        <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_secundaria');?>" alt="<?php the_field('descripcion_imagen_secundaria'); ?>" height="280" width="280">
                     </div>
                 </div>
 

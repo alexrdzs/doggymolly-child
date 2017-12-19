@@ -97,7 +97,7 @@ do_action('homepage');
             <p class="lead"><?php the_field('texto_final');?></p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_final');?>" alt="<?php the_field('descripcion_imagen_final');?>">
+            <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_final');?>" alt="<?php the_field('descripcion_imagen_final');?>" height="280" width="280">
         </div>
     </div>
 
