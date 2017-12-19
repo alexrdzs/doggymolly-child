@@ -93,7 +93,7 @@ do_action('homepage');
 
     <div class="row featurette">
         <div class="col-md-7" style="padding:25px;">
-            <h2 class="featurette-heading"><?php the_field('titulo_final'); ?><br /> <span class="text-muted"><?php the_field('subtitulo_final'); ?>.</span></h2>
+            <h2 class="featurette-heading"><?php the_field('titulo_final'); ?><br /> <span class="text-muted"><?php the_field('subtitulo_final'); ?></span></h2>
             <p class="lead"><?php the_field('texto_final');?></p>
         </div>
         <div class="col-md-5">
