@@ -38,7 +38,7 @@ function pwwp_enqueue_my_styles() {
 }
 add_action('wp_enqueue_scripts', 'pwwp_enqueue_my_styles');
 
-/*********************************************/
+/*******************************************************************************/
 
 
     /* IMPORT GOOGLE FONTS */
@@ -53,6 +53,8 @@ add_action( 'init', 'remove_storefront_header_search' );
 function remove_storefront_header_search() {
 	remove_action( 'storefront_header', 'storefront_product_search', 	40 );
 }
+
+/*******************************************************************************/
 
 
 /*** Sección Banner Superior 
@@ -73,36 +75,6 @@ function storefront_add_topbar() {
         <?php
 }
 add_action( 'storefront_before_header', 'storefront_add_topbar' );***/
-
-/// Nueva sección después de FEATURED ///
-            add_action('storefront_homepage_after_featured_products', 'custom_storefront_section1');
-
-function custom_storefront_section1(){ ?>
-
-            <div class="clearfix"></div>
-            <section>
-
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette" style=" margin:25px 0;">
-                    <div class="col-md-7 col-md-push-5" style="padding:35px;">
-                        <h2 class="featurette-heading" style="color:#96588a;">Oh yeah, it's that good. <br><span class="text-muted">See for yourself.</span></h2>
-                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5 col-md-pull-7">
-                        <img class="featurette-image img-responsive center-block" src="https://placeimg.com/280/280/animals" alt="Generic placeholder image">
-                    </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                
-
-
-            </section>
-
-            <?php }
 
 /*** Sección abajo del Header ***/
 function tdmm_storefront_homepage_slider() {
@@ -126,6 +98,43 @@ function tdmm_storefront_homepage_slider() {
  
 }
 add_action( 'storefront_before_content', 'tdmm_storefront_homepage_slider', 5 );
+
+
+
+
+/// Nueva sección después de FEATURED ///
+            add_action('storefront_homepage_after_featured_products', 'custom_storefront_section1');
+
+function custom_storefront_section1(){ ?>
+
+            <div class="clearfix"></div>
+            <section>
+
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette" style=" margin:25px 0;">
+                    <div class="col-md-7 col-md-push-5" style="padding:35px;">
+                        <h2 class="featurette-heading" style="color:#96588a;"><?php the_field('titulo_seccion_secundaria'); ?><br><span class="text-muted"><?php the_field('subtitulo_seccion_secundaria'); ?></span></h2>
+                        <p class="lead"><?php the_field('texto_secundario');?></p>
+                    </div>
+                    <div class="col-md-5 col-md-pull-7">
+                        <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_secundaria');?>" alt="<?php the_field('descripcion_imagen_secundaria'); ?>">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                
+
+
+            </section>
+
+            <?php }
+
+
+/*******************************************************************************/
+
 
 /** Cambios del menú en mobile **/
 

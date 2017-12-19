@@ -77,12 +77,12 @@ do_action('homepage');
 
                         <div class="row featurette">
                             <div class="col-md-12" style="padding:25px;">
-                                <h2 class="section-title">Meet our <span class="text-muted">furr</span>riends!</h2>
+                                <h2 class="section-title"><?php the_field('titulo_instagram'); ?></h2>
                                 <div class="sp-section-description">
-                                    <p>These are some pics from social media. Use <a href="">#mollysfriends</a> to be featured!</p>
+                                    <p><?php the_field('subtitulo_instagram'); ?></p>
                                 </div>
 
-                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                <p class="lead"><?php the_field('texto_despues_de_instagram'); ?></p>
                             </div>
 
                         </div>
@@ -93,11 +93,11 @@ do_action('homepage');
 
     <div class="row featurette">
         <div class="col-md-7" style="padding:25px;">
-            <h2 class="featurette-heading">And lastly, this one. <br /> <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading"><?php the_field('titulo_final'); ?><br /> <span class="text-muted"><?php the_field('subtitulo_final'); ?>.</span></h2>
+            <p class="lead"><?php the_field('texto_final');?></p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="https://placeimg.com/280/280/animals" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_final');?>" alt="<?php the_field('descripcion_imagen_final');?>">
         </div>
     </div>
 
