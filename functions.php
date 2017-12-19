@@ -91,7 +91,7 @@ function tdmm_storefront_homepage_slider() {
         <div class="center-block" style="margin:35px">
                         <h2 class="text-center category-heading">Hello, world!</h2>            
 
-            <h1 class="hero-text text-center" style="color:#96588a">We are on the quest of curating the greatest dog lover gifts on the web.</h1>
+            <h1 class="hero-text text-center" style="color:#777">We are on the quest of curating the greatest dog lover gifts on the web.</h1>
 
         </div>
     </div>' );
