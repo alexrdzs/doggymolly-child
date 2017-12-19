@@ -241,6 +241,12 @@ li.type-product a:first-child {
     display: block;
 }
 
+
+/* Altura Blog */
+.hentry .entry-header {
+    height: 120px;
+}
+
 /* Botón de "ON SALE" */
 
 ul.products li.product .onsale {
