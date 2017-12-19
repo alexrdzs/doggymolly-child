@@ -86,13 +86,13 @@ function tdmm_storefront_homepage_slider() {
  
     }
      
-    echo ( ' <div class="jumbotron" style="margin:15px; padding:25px;">
+    echo ( ' <div class="jumbotron hero-image" style="margin:15px; padding:25px;">
        
-        <div class="container">
-            <h1>Hello, world!</h1>            
+        <div class="center-block" style="margin:35px">
+                        <h2 class="text-center category-heading">Hello, world!</h2>            
 
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            <h1 class="hero-text text-center" style="color:#96588a">We are on the quest of curating the greatest dog lover gifts on the web.</h1>
+
         </div>
     </div>' );
  

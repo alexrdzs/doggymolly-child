@@ -222,6 +222,24 @@ woocommerce-cart-tab__contents {
 
 /**** HOMEPAGE ***/
 
+/* The hero image */
+.hero-image {
+    /* The image used */
+    background-color:#DFEFF5; 
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    color: #131315;
+}
+
 /* MARGIN BOTTOM CATEGORY SECTION TITLES */
 
 .storefront-product-section .section-title {
