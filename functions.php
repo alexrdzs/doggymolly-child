@@ -57,6 +57,80 @@ function remove_storefront_header_search() {
 /*******************************************************************************/
 
 
+/*** Sección Banner Superior 
+
+function storefront_add_topbar() {
+    ?>
+
+        <div id="topbar" class="col-12">
+            <div style="text-align: center; background: #DFEFF5; color: #3d3d3d; font-weight: bold; font-size:1em; height:10vh;">
+                <div class="col-md-4"></div>
+                <div class="col-sm-6 col-md-2">1 Get 25% off your first order!</div>
+                <div class="col-sm-6 col-md-2"><span style="margin: 0 1em;">2 Check out our new Jackets!</span></div>
+                <div class="col-md-4"></div>
+
+
+            </div>
+        </div>
+        <?php
+}
+add_action( 'storefront_before_header', 'storefront_add_topbar' );***/
+
+/*** Sección abajo del Header ***/
+function tdmm_storefront_homepage_slider() {
+ 
+    // if not the StoreFront Homepage Page Template return false
+    if ( ! is_page_template( 'template-homepage.php' ) ) {
+ 
+        return false;
+ 
+    }
+     
+    echo ( ' <div class="jumbotron" style="margin:15px; padding:25px;">
+       
+        <div class="container">
+            <h1>Hello, world!</h1>            
+
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div>' );
+ 
+}
+add_action( 'storefront_before_content', 'tdmm_storefront_homepage_slider', 5 );
+
+
+
+
+/// Nueva sección después de FEATURED ///
+            add_action('storefront_homepage_after_featured_products', 'custom_storefront_section1');
+
+function custom_storefront_section1(){ ?>
+
+            <div class="clearfix"></div>
+            <section>
+
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette" style=" margin:25px 0;">
+                    <div class="col-md-7 col-md-push-5" style="padding:35px;">
+                        <h2 class="featurette-heading" style="color:#96588a;"><?php the_field('titulo_seccion_secundaria'); ?><br><span class="text-muted"><?php the_field('subtitulo_seccion_secundaria'); ?></span></h2>
+                        <p class="lead"><?php the_field('texto_secundario');?></p>
+                    </div>
+                    <div class="col-md-5 col-md-pull-7">
+                        <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_secundaria');?>" alt="<?php the_field('descripcion_imagen_secundaria'); ?>" height="280" width="280">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                
+
+
+            </section>
+
+            <?php }
 
 
 /*******************************************************************************/
@@ -96,3 +170,234 @@ function new_loop_shop_per_page( $cols ) {
   $cols = 9;
   return $cols;
 }
+
+
+
+/*** ACF FIELDS CATEGORY ***/
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5a383ea3af82b',
+	'title' => 'Categorías',
+	'fields' => array(
+		array(
+			'key' => 'field_5a386dff83e60',
+			'label' => 'Subtítulo',
+			'name' => 'subtitulo-inicial',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5a383eb973009',
+			'label' => 'Texto Inicial',
+			'name' => 'texto-inicial',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5a383f3f7300a',
+			'label' => 'Categoría de proudctos',
+			'name' => 'cat_products',
+			'type' => 'text',
+			'instructions' => 'Nombre de la categoría a mostrar:',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5a386ece632b8',
+			'label' => 'Título de Relacionados',
+			'name' => 'titulo-interlinking',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5a386ea892f5d',
+			'label' => 'Subtítulo Relacionados',
+			'name' => 'subtitulo-interlinking',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5a39392efd68a',
+			'label' => 'Categorías Relacionadas',
+			'name' => 'rep-interlinking',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5a3939d9fd691',
+					'label' => 'Imagen Relacionado',
+					'name' => 'imagen_relacionado',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'url',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5a3939b0fd68f',
+					'label' => 'Título',
+					'name' => 'titulo-relacionado',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5a393b12fd692',
+					'label' => 'Texto Relacionado',
+					'name' => 'texto_relacionado',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5a3939bcfd690',
+					'label' => 'URL - Link',
+					'name' => 'url_link',
+					'type' => 'page_link',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array(
+						0 => 'page',
+					),
+					'taxonomy' => array(
+					),
+					'allow_null' => 0,
+					'allow_archives' => 1,
+					'multiple' => 0,
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'categoria.php',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'acf_after_title',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
