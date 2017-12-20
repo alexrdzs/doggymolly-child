@@ -81,7 +81,9 @@ do_action('homepage');
                                 <div class="sp-section-description">
                                     <p><?php the_field('subtitulo_instagram'); ?></p>
                                 </div>
-
+    
+                                <?php echo do_shortcode('[instagram-feed]'); ?>
+                                
                                 <p class="lead"><?php the_field('texto_despues_de_instagram'); ?></p>
                             </div>
 
