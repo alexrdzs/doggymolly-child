@@ -84,7 +84,7 @@ do_action('homepage');
     
                                 <?php echo do_shortcode('[instagram-feed]'); ?>
                                 
-                                <p class="lead"><?php the_field('texto_despues_de_instagram'); ?></p>
+                                <p class="lead" style="margin-top:20px;"><?php the_field('texto_despues_de_instagram'); ?></p>
                             </div>
 
                         </div>
