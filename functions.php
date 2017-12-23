@@ -401,3 +401,12 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+
+
+/**** DISPLAY EMPTY CATEGORIES ****/
+add_filter( 'woocommerce_product_subcategories_hide_empty', 'hide_empty_categories', 10, 1 );
+function hide_empty_categories ( $hide_empty ) {
+    $hide_empty  =  FALSE;
+    // You can add other logic here too
+    return $hide_empty;
+}
