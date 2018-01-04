@@ -73,14 +73,39 @@ function custom_storefront_section2(){ ?>
                         <div class="sp-section-description"><p>We know you are a true dog lover, but let's be honest, there's one breed you really, really, reaaaaally love. Good news is we've got something for everyone!</p>
 </div>
                         
-                                <?php echo do_shortcode('[product_categories hide_empty="0" columns="5"]'); ?>
+                               <div class="columns-6">
+                                    <ul class="products">
+<li class="product-category product first">
+	<a href="./beagle/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Beagle" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
+			Beagle		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="./boxer/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Boxer" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
+			Boxer		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="./bulldogs/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Bulldogs" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
+			Bulldogs		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="./chihuahua/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Chihuahua" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
+			Chihuahua		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="./corgi/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Corgi" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
+			Corgi		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="./dachshund/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Dachshund" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
+			Dachshund		</h2>
+		</a></li>
+</ul>
+</div> 
                     </div>
                     
                 </div>
 
-
                 
-
 
             </section>
 
