@@ -595,4 +595,119 @@ acf_add_local_field_group(array(
 
 endif;
 
+/// HOME CATS ///
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5a4e9815a85b2',
+	'title' => 'Home Cats',
+	'fields' => array(
+		array(
+			'key' => 'field_5a4e98235b34e',
+			'label' => 'Categorías / Páginas',
+			'name' => 'home-cats',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'row',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5a4e98335b34f',
+					'label' => 'Imagen',
+					'name' => 'imagen_homecat',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'url',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5a4e986a5b350',
+					'label' => 'Título',
+					'name' => 'titulo_homecat',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5a4e98885b351',
+					'label' => 'URL',
+					'name' => 'url_linkhomecat',
+					'type' => 'page_link',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array(
+						0 => 'page',
+					),
+					'taxonomy' => array(
+					),
+					'allow_null' => 0,
+					'allow_archives' => 1,
+					'multiple' => 0,
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page',
+				'operator' => '==',
+				'value' => '24',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'acf_after_title',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
+
 ?>

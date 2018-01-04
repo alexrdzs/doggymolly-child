@@ -39,6 +39,7 @@ function tdmm_storefront_homepage_slider() {
         return false;
  
     }
+    
      
     echo ( ' <div class="jumbotron hero-image" style="margin:15px; padding:25px;">
        
@@ -68,39 +69,50 @@ function custom_storefront_section2(){ ?>
 
                 <div class="row" style=" margin:25px 0;">
                     <div class="col-md-12">
+                        
                         <h2 class="section-title">Who is your best friend?</h2>
 
                         <div class="sp-section-description"><p>We know you are a true dog lover, but let's be honest, there's one breed you really, really, reaaaaally love. Good news is we've got something for everyone!</p>
 </div>
                         
                                <div class="columns-6">
-                                    <ul class="products">
-<li class="product-category product first">
-	<a href="./beagle/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Beagle" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
-			Beagle		</h2>
-		</a></li>
+                        <?php if( have_rows('home-cats') ): ?>
+
+	<ul class="products">
+
+	<?php while( have_rows('home-cats') ): the_row(); 
+
+		// vars
+		$image = get_sub_field('imagen_homecat');
+		$title = get_sub_field('titulo_homecat');
+		$link = get_sub_field('url_linkhomecat');
+
+		?>
+        
 <li class="product-category product">
-	<a href="./boxer/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Boxer" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
-			Boxer		</h2>
-		</a></li>
-<li class="product-category product">
-	<a href="./bulldogs/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Bulldogs" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
-			Bulldogs		</h2>
-		</a></li>
-<li class="product-category product">
-	<a href="./chihuahua/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Chihuahua" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
-			Chihuahua		</h2>
-		</a></li>
-<li class="product-category product">
-	<a href="./corgi/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Corgi" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
-			Corgi		</h2>
-		</a></li>
-<li class="product-category product last">
-	<a href="./dachshund/"><img src="./wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Dachshund" width="300" height="300" scale="0">		<h2 class="woocommerce-loop-category__title">
-			Dachshund		</h2>
-		</a></li>
-</ul>
-</div> 
+	<?php if( $link ): ?>
+
+    <a href="<?php echo $link; ?>">
+
+        <?php endif; ?>
+<img src="<?php echo $image; ?>" alt="<?php echo $title;?>" width="300" height="300"/>
+                    
+ <h2 class="woocommerce-loop-category__title">
+			<?php echo $title; ?>
+</h2>
+		
+ <?php if( $title ): ?>
+				</a>
+			<?php endif; ?>
+</li>
+        
+
+	<?php endwhile; ?>
+
+	</ul>
+
+<?php endif; ?>
+                        </div> 
                     </div>
                     
                 </div>
