@@ -39,6 +39,7 @@ function tdmm_storefront_homepage_slider() {
         return false;
  
     }
+    
      
     echo ( ' <div class="jumbotron hero-image" style="margin:15px; padding:25px;">
        
@@ -68,19 +69,55 @@ function custom_storefront_section2(){ ?>
 
                 <div class="row" style=" margin:25px 0;">
                     <div class="col-md-12">
+                        
                         <h2 class="section-title">Who is your best friend?</h2>
 
                         <div class="sp-section-description"><p>We know you are a true dog lover, but let's be honest, there's one breed you really, really, reaaaaally love. Good news is we've got something for everyone!</p>
 </div>
                         
-                                <?php echo do_shortcode('[product_categories hide_empty="0" columns="5"]'); ?>
+                               <div class="columns-6">
+                        <?php if( have_rows('home-cats') ): ?>
+
+	<ul class="products">
+
+	<?php while( have_rows('home-cats') ): the_row(); 
+
+		// vars
+		$image = get_sub_field('imagen_homecat');
+		$title = get_sub_field('titulo_homecat');
+		$link = get_sub_field('url_linkhomecat');
+
+		?>
+        
+<li class="product-category product">
+	<?php if( $link ): ?>
+
+    <a href="<?php echo $link; ?>">
+
+        <?php endif; ?>
+<img src="<?php echo $image; ?>" alt="<?php echo $title;?>" width="300" height="300"/>
+                    
+ <h2 class="woocommerce-loop-category__title">
+			<?php echo $title; ?>
+</h2>
+		
+ <?php if( $title ): ?>
+				</a>
+			<?php endif; ?>
+</li>
+        
+
+	<?php endwhile; ?>
+
+	</ul>
+
+<?php endif; ?>
+                        </div> 
                     </div>
                     
                 </div>
 
-
                 
-
 
             </section>
 
