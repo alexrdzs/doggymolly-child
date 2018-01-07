@@ -124,11 +124,11 @@ if( $post_id1 ): ?>
 	<a href="<?php echo get_the_permalink($post_id4); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id4, 'small' ); ?>" alt="<?php echo get_the_title($post_id4); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id4); ?></h2>
 		</a></li> 
         
-                 <li class="product-category product" id="cat5">
+                 <li class="product-category product last" id="cat5">
 	<a href="<?php echo get_the_permalink($post_id5); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id5, 'small' ); ?>" alt="<?php echo get_the_title($post_id5); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id5); ?></h2>
 		</a></li> 
         
-           <li class="product-category product" id="cat6">
+           <li class="product-category product first" id="cat6">
 	<a href="<?php echo get_the_permalink($post_id6); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id6, 'small' ); ?>" alt="<?php echo get_the_title($post_id6); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id6); ?></h2>
 		</a></li> 
         
@@ -145,11 +145,11 @@ if( $post_id1 ): ?>
 	<a href="<?php echo get_the_permalink($post_id9); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id9, 'small' ); ?>" alt="<?php echo get_the_title($post_id9); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id9); ?></h2>
 		</a></li> 
         
-    <li class="product-category product" id="cat10">
+    <li class="product-category product last" id="cat10">
 	<a href="<?php echo get_the_permalink($post_id10); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id10, 'small' ); ?>" alt="<?php echo get_the_title($post_id10); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id10); ?></h2>
 		</a></li> 
         
-          <li class="product-category product" id="cat11">
+          <li class="product-category product first" id="cat11">
 	<a href="<?php echo get_the_permalink($post_id11); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id11, 'small' ); ?>" alt="<?php echo get_the_title($post_id11); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id11); ?></h2>
 		</a></li> 
         
