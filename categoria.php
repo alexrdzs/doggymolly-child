@@ -34,11 +34,11 @@ get_header();  ?>
             
             $catname = get_field( "cat_products" );
             
-            echo do_shortcode('[ajax_load_more post_type="product" taxonomy="product_cat" taxonomy_terms="'.$catname.'" css_classes="products" posts_per_page="12" transition="fade" button_loading_label="Loading..."]');
+            echo do_shortcode('[products columns="4" category="'.$catname.'"]')
+            
             
 ?>
 
-            <hr class="featurette-divider">
 
 
 <!-- CONTENIDO POST -->

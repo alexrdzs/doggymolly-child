@@ -109,9 +109,14 @@ h6,
 body,
 button,
 input,
-textarea,
+textarea
     {
     font-family: 'Nunito', sans-serif !important;
+}
+
+p,
+li {
+        font-size: 1.25em;
 }
 
 
@@ -255,7 +260,7 @@ woocommerce-cart-tab__contents {
 /* Altura de productos para alinear boton de carrito */
 
 li.type-product a:first-child {
-    min-height: 200px;
+    min-height: 320px;
     display: block;
 }
 
