@@ -4,12 +4,13 @@
 * Plugin Name: Doggy Molly Homepage Sections Plugin
 * Description: Aquí van las secciones del homepage.
 * Author: alex rodríguez santibáñez
-* Version: 0.1
+* Version: 1.1 07 01 18
 */
 
 
 /*******************************************************************************/
 
+	
 
 /*** Sección Banner Superior 
 
@@ -46,7 +47,7 @@ function tdmm_storefront_homepage_slider() {
         <div class="center-block" style="margin:35px">
                         <h2 class="text-center category-heading">Hello, world!</h2>            
 
-            <h1 class="hero-text text-center" style="color:#777">We are on the quest of curating the greatest dog lover gifts on the web.</h1>
+            <h1 class="hero-text text-center" style="color:#777">We are on the quest of curating the best dog lover gifts on the web.</h1>
 
         </div>
     </div>' );
@@ -75,43 +76,104 @@ function custom_storefront_section2(){ ?>
                         <div class="sp-section-description"><p>We know you are a true dog lover, but let's be honest, there's one breed you really, really, reaaaaally love. Good news is we've got something for everyone!</p>
 </div>
                         
-                               <div class="columns-6">
-                        <?php if( have_rows('home-cats') ): ?>
+                        
+                               <div class="woocommerce columns-5">
 
 	<ul class="products">
-
-	<?php while( have_rows('home-cats') ): the_row(); 
-
-		// vars
-		$image = get_sub_field('imagen_homecat');
-		$title = get_sub_field('titulo_homecat');
-		$link = get_sub_field('url_linkhomecat');
-
-		?>
         
-<li class="product-category product">
-	<?php if( $link ): ?>
-
-    <a href="<?php echo $link; ?>">
-
-        <?php endif; ?>
-<img src="<?php echo $image; ?>" alt="<?php echo $title;?>" width="300" height="300"/>
-                    
- <h2 class="woocommerce-loop-category__title">
-			<?php echo $title; ?>
-</h2>
-		
- <?php if( $title ): ?>
-				</a>
-			<?php endif; ?>
-</li>
         
+        <?php 
 
-	<?php endwhile; ?>
+// vars
+$post_id1 = get_field('url1', false, false);
+$post_id2 = get_field('url2', false, false);
+$post_id3 = get_field('url3', false, false);
+$post_id4 = get_field('url4', false, false);
+$post_id5 = get_field('url5', false, false);
 
+$post_id6 = get_field('url6', false, false);
+$post_id7 = get_field('url7', false, false);
+$post_id8 = get_field('url8', false, false);
+$post_id9 = get_field('url9', false, false);
+$post_id10 = get_field('url10', false, false);
+                                      
+$post_id11 = get_field('url11', false, false);
+$post_id12 = get_field('url12', false, false);
+$post_id13 = get_field('url13', false, false);
+$post_id14 = get_field('url14', false, false);
+$post_id15 = get_field('url15', false, false);
+
+                                      
+// check 
+if( $post_id1 ): ?>
+             
+        <li class="product-category product first" id="cat1">
+	<a href="<?php echo get_the_permalink($post_id1); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id1, 'small' ); ?>" alt="<?php echo get_the_title($post_id1); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id1); ?></h2>
+		</a></li> 
+        
+         <li class="product-category product" id="cat2">
+	<a href="<?php echo get_the_permalink($post_id2); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id2, 'small' ); ?>" alt="<?php echo get_the_title($post_id2); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id2); ?></h2>
+		</a></li> 
+        
+        
+           <li class="product-category product" id="cat3">
+	<a href="<?php echo get_the_permalink($post_id3); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id3, 'small' ); ?>" alt="<?php echo get_the_title($post_id3); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id3); ?></h2>
+		</a></li> 
+        
+            <li class="product-category product" id="cat4">
+	<a href="<?php echo get_the_permalink($post_id4); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id4, 'small' ); ?>" alt="<?php echo get_the_title($post_id4); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id4); ?></h2>
+		</a></li> 
+        
+                 <li class="product-category product" id="cat5">
+	<a href="<?php echo get_the_permalink($post_id5); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id5, 'small' ); ?>" alt="<?php echo get_the_title($post_id5); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id5); ?></h2>
+		</a></li> 
+        
+           <li class="product-category product" id="cat6">
+	<a href="<?php echo get_the_permalink($post_id6); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id6, 'small' ); ?>" alt="<?php echo get_the_title($post_id6); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id6); ?></h2>
+		</a></li> 
+        
+        
+             <li class="product-category product" id="cat7">
+	<a href="<?php echo get_the_permalink($post_id7); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id7, 'small' ); ?>" alt="<?php echo get_the_title($post_id7); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id7); ?></h2>
+		</a></li> 
+        
+          <li class="product-category product" id="cat8">
+	<a href="<?php echo get_the_permalink($post_id8); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id8, 'small' ); ?>" alt="<?php echo get_the_title($post_id8); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id8); ?></h2>
+		</a></li> 
+        
+          <li class="product-category product" id="cat9">
+	<a href="<?php echo get_the_permalink($post_id9); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id9, 'small' ); ?>" alt="<?php echo get_the_title($post_id9); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id9); ?></h2>
+		</a></li> 
+        
+    <li class="product-category product" id="cat10">
+	<a href="<?php echo get_the_permalink($post_id10); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id10, 'small' ); ?>" alt="<?php echo get_the_title($post_id10); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id10); ?></h2>
+		</a></li> 
+        
+          <li class="product-category product" id="cat11">
+	<a href="<?php echo get_the_permalink($post_id11); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id11, 'small' ); ?>" alt="<?php echo get_the_title($post_id11); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id11); ?></h2>
+		</a></li> 
+        
+        
+            <li class="product-category product" id="cat12">
+	<a href="<?php echo get_the_permalink($post_id12); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id12, 'small' ); ?>" alt="<?php echo get_the_title($post_id12); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id12); ?></h2>
+		</a></li> 
+        
+            <li class="product-category product" id="cat13">
+	<a href="<?php echo get_the_permalink($post_id13); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id13, 'small' ); ?>" alt="<?php echo get_the_title($post_id13); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id13); ?></h2>
+		</a></li> 
+        
+           <li class="product-category product" id="cat14">
+	<a href="<?php echo get_the_permalink($post_id14); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id14, 'small' ); ?>" alt="<?php echo get_the_title($post_id14); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id14); ?></h2>
+		</a></li> 
+        
+                  <li class="product-category product last" id="cat15">
+	<a href="<?php echo get_the_permalink($post_id15); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id15, 'small' ); ?>" alt="<?php echo get_the_title($post_id15); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id15); ?></h2>
+		</a></li> 
+        
+        
+<?php endif; ?>
 	</ul>
 
-<?php endif; ?>
                         </div> 
                     </div>
                     
@@ -120,6 +182,9 @@ function custom_storefront_section2(){ ?>
                 
 
             </section>
+
+                <hr class="featurette-divider">
+
 
             <?php }
 
