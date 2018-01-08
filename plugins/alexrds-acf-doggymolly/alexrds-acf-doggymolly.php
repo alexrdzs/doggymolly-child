@@ -79,24 +79,11 @@ acf_add_local_field_group(array(
 			'max' => 0,
 			'layout' => 'table',
 			'sub_fields' => array(
-				array(
-					'key' => 'field_5a3939d9fd691',
-					'label' => 'Imagen Relacionado',
-					'name' => 'imagen_relacionado',
-					'type' => 'image',
-		
-					'required' => 0,
-					'conditional_logic' => 0,
-					'return_format' => 'url',
-					'preview_size' => 'thumbnail',
-					'library' => 'all',
-				),
-				array(
-					'key' => 'field_5a3939b0fd68f',
-					'label' => 'Título',
-					'name' => 'titulo-relacionado',
-					'type' => 'text',
-		
+                array(
+					'key' => 'field_5a3939bcfd690',
+					'label' => 'Page - Link',
+					'name' => 'url_link',
+					'type' => 'page_link',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -104,11 +91,14 @@ acf_add_local_field_group(array(
 						'class' => '',
 						'id' => '',
 					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
+					'post_type' => array(
+						0 => 'page',
+					),
+					'taxonomy' => array(
+					),
+					'allow_null' => 0,
+					'allow_archives' => 1,
+					'multiple' => 0,
 				),
 				array(
 					'key' => 'field_5a393b12fd692',
@@ -129,28 +119,7 @@ acf_add_local_field_group(array(
 					'append' => '',
 					'maxlength' => '',
 				),
-				array(
-					'key' => 'field_5a3939bcfd690',
-					'label' => 'URL - Link',
-					'name' => 'url_link',
-					'type' => 'page_link',
-		
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'post_type' => array(
-						0 => 'page',
-					),
-					'taxonomy' => array(
-					),
-					'allow_null' => 0,
-					'allow_archives' => 1,
-					'multiple' => 0,
-				),
+				
 			),
 		),
 	),

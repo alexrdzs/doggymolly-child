@@ -15,9 +15,10 @@ get_header();  ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-
+             <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url($postid); ?>" alt="<?php echo $title; ?> section." title="<?php echo get_the_title($postid); ?>" width="150" height="150" style="margin-bottom: 10px;">  
+            
             <h1 class="category-heading text-center">
-                <?php the_title(); ?> <span>Gifts</span>
+                <?php the_title(); ?>
             </h1>
             <h2 class="text-muted category-subheading text-center">
                 <?php the_field('subtitulo-inicial'); ?>
@@ -73,26 +74,25 @@ endwhile; else: ?>
             
             <!-- INTERLINKING -->
             
-             <h2 class="category-heading2 text-center">
-                <?php the_field('titulo-interlinking'); ?> 
-            </h2>
-            <p class="text-muted lead text-center">
-                <?php the_field('subtitulo-interlinking'); ?>
-            </p>
+             
               
             
                   
                 <?php if( have_rows('rep-interlinking') ): ?>
+            
+            <h2 class="category-heading2 text-center">
+                Looking for more?
+            </h2>
+            <p class="text-muted lead text-center">
+                You can take a look at some of these other super loving pups.
+            </p>
 
 	<div class="row">
 
 	<?php while( have_rows('rep-interlinking') ): the_row(); 
 
 		// vars
-		$image = get_sub_field('imagen_relacionado');
-        $title = get_sub_field('titulo-relacionado');
-		$content = get_sub_field('texto_relacionado');
-		$link = get_sub_field('url_link');
+		$link = get_sub_field('url_link', false, false);
 
 		?>
         
@@ -105,20 +105,20 @@ endwhile; else: ?>
 			<?php endif; ?>
 
                     
+				 <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $link, 'small' ); ?>" alt="Let's go to the <?php echo $title; ?> section." title="<?php echo get_the_title($post_id1); ?>" width="120" height="120" style="margin-bottom: 20px;">  
+                    
+                    <h3 class="center-block text-center"><?php echo get_the_title($link); ?></h3>
                     
                     
-				 <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo $image; ?>" alt="Let's go to the <?php echo $title; ?> section." title="<?php echo $title; ?>" width="120" height="120" style="margin-bottom: 20px;">      
+                   </a>
+             
+               <p class="center-block text-center"><?php echo $content; ?></p>
 
 			<?php if( $link ): ?>
-				</a>
+				
 			<?php endif; ?>
 
-             <h3 class="center-block text-center"><?php echo $title; ?></h3>
-		    
-                        
-                  
-          <p class="center-block text-center"><?php echo $content; ?></p>
-           <p><a class="btn btn-default center-block" href="<?php echo $link; ?>" role="button">View</a></p>  
+        
                           
                 </div>
         
