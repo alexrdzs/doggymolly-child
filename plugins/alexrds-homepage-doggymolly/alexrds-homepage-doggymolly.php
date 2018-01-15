@@ -4,7 +4,7 @@
 * Plugin Name: Doggy Molly Homepage Sections Plugin
 * Description: Aquí van las secciones del homepage.
 * Author: alex rodríguez santibáñez
-* Version: 1.1 07 01 18
+* Version: 1.1 15 01 18
 */
 
 
@@ -45,9 +45,9 @@ function tdmm_storefront_homepage_slider() {
     echo ( ' <div class="jumbotron hero-image" style="margin:15px; padding:25px;">
        
         <div class="center-block" style="margin:35px">
-                        <h2 class="text-center category-heading">Hello, world!</h2>            
+                                   
 
-            <h1 class="hero-text text-center" style="color:#777">We are on the quest of curating the best dog lover gifts on the web.</h1>
+            <h1 class="text-center category-heading">Find the best dog lover gifts in the web and connect with dog lovers from around the world.</h1>
 
         </div>
     </div>' );
@@ -66,9 +66,7 @@ function custom_storefront_section2(){ ?>
             <div class="clearfix"></div>
             <section>
 
-
-
-                <div class="row" style=" margin:25px 0;">
+                <div class="row">
                     <div class="col-md-12">
                         
                         <h2 class="section-title">Who is your best friend?</h2>
