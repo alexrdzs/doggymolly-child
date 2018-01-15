@@ -69,7 +69,6 @@ endwhile; else: ?>
             <!-- FIN CONTENIDO POST -->
             
             
-            <hr class="featurette-divider">
             
             
             <!-- INTERLINKING -->
@@ -84,15 +83,19 @@ endwhile; else: ?>
                 Looking for more?
             </h2>
             <p class="text-muted lead text-center">
-                You can take a look at some of these other super loving pups.
+                You can take a look at some of these other super loving dogs.
+                
             </p>
+            
+                        <hr class="featurette-divider">
+
 
 	<div class="row">
 
 	<?php while( have_rows('rep-interlinking') ): the_row(); 
 
 		// vars
-		$link = get_sub_field('url_link', false, false);
+		$linkint = get_sub_field('url_link', false, false);
 
 		?>
         
@@ -100,21 +103,22 @@ endwhile; else: ?>
          <div class="col-md-4">
                            
              
-             <?php if( $link ): ?>
-				<a href="<?php echo $link; ?>">
+             <?php if( $linkint ): ?>
+            
+				<a href="<?php echo get_the_permalink($linkint); ?>">
 			<?php endif; ?>
 
                     
-				 <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $link, 'small' ); ?>" alt="Let's go to the <?php echo $title; ?> section." title="<?php echo get_the_title($post_id1); ?>" width="120" height="120" style="margin-bottom: 20px;">  
+				 <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $linkint, 'small' ); ?>" alt="Let's go to the <?php echo get_the_title($linkint); ?> section." title="<?php echo get_the_title($linkint); ?>" width="120" height="120" style="margin-bottom: 20px;">  
                     
-                    <h3 class="center-block text-center"><?php echo get_the_title($link); ?></h3>
+                    <h3 class="center-block text-center"><?php echo get_the_title($linkint); ?></h3>
                     
                     
                    </a>
              
                <p class="center-block text-center"><?php echo $content; ?></p>
 
-			<?php if( $link ): ?>
+			<?php if( $linkint ): ?>
 				
 			<?php endif; ?>
 
