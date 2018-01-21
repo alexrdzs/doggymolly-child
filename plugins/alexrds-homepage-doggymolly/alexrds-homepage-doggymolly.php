@@ -106,66 +106,66 @@ $post_id15 = get_field('url15', false, false);
 if( $post_id1 ): ?>
              
         <li class="product-category product first" id="cat1">
-	<a href="<?php echo get_the_permalink($post_id1); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id1, 'small' ); ?>" alt="<?php echo get_the_title($post_id1); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id1); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id1); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id1, 'small' ); ?>" alt="<?php echo get_the_title($post_id1); ?>" width="300" height="300"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id1); ?></h2>
 		</a></li> 
         
          <li class="product-category product" id="cat2">
-	<a href="<?php echo get_the_permalink($post_id2); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id2, 'small' ); ?>" alt="<?php echo get_the_title($post_id2); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id2); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id2); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id2, 'small' ); ?>" alt="<?php echo get_the_title($post_id2); ?>" width="300" height="300"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id2); ?></h2>
 		</a></li> 
         
         
            <li class="product-category product" id="cat3">
-	<a href="<?php echo get_the_permalink($post_id3); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id3, 'small' ); ?>" alt="<?php echo get_the_title($post_id3); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id3); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id3); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id3, 'small' ); ?>" alt="<?php echo get_the_title($post_id3); ?>" width="300" height="300"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id3); ?></h2>
 		</a></li> 
         
             <li class="product-category product" id="cat4">
-	<a href="<?php echo get_the_permalink($post_id4); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id4, 'small' ); ?>" alt="<?php echo get_the_title($post_id4); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id4); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id4); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id4, 'small' ); ?>" alt="<?php echo get_the_title($post_id4); ?>" width="300" height="300"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id4); ?></h2>
 		</a></li> 
         
                  <li class="product-category product last" id="cat5">
-	<a href="<?php echo get_the_permalink($post_id5); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id5, 'small' ); ?>" alt="<?php echo get_the_title($post_id5); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id5); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id5); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id5, 'small' ); ?>" alt="<?php echo get_the_title($post_id5); ?>" width="300" height="300"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id5); ?></h2>
 		</a></li> 
         
            <li class="product-category product first" id="cat6">
-	<a href="<?php echo get_the_permalink($post_id6); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id6, 'small' ); ?>" alt="<?php echo get_the_title($post_id6); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id6); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id6); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id6, 'small' ); ?>" alt="<?php echo get_the_title($post_id6); ?>" width="300" height="300"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id6); ?></h2>
 		</a></li> 
         
         
              <li class="product-category product" id="cat7">
-	<a href="<?php echo get_the_permalink($post_id7); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id7, 'small' ); ?>" alt="<?php echo get_the_title($post_id7); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id7); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id7); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id7, 'small' ); ?>" alt="<?php echo get_the_title($post_id7); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id7); ?></h2>
 		</a></li> 
         
           <li class="product-category product" id="cat8">
-	<a href="<?php echo get_the_permalink($post_id8); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id8, 'small' ); ?>" alt="<?php echo get_the_title($post_id8); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id8); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id8); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id8, 'small' ); ?>" alt="<?php echo get_the_title($post_id8); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id8); ?></h2>
 		</a></li> 
         
           <li class="product-category product" id="cat9">
-	<a href="<?php echo get_the_permalink($post_id9); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id9, 'small' ); ?>" alt="<?php echo get_the_title($post_id9); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id9); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id9); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id9, 'small' ); ?>" alt="<?php echo get_the_title($post_id9); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id9); ?></h2>
 		</a></li> 
         
     <li class="product-category product last" id="cat10">
-	<a href="<?php echo get_the_permalink($post_id10); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id10, 'small' ); ?>" alt="<?php echo get_the_title($post_id10); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id10); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id10); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id10, 'small' ); ?>" alt="<?php echo get_the_title($post_id10); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id10); ?></h2>
 		</a></li> 
         
           <li class="product-category product first" id="cat11">
-	<a href="<?php echo get_the_permalink($post_id11); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id11, 'small' ); ?>" alt="<?php echo get_the_title($post_id11); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id11); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id11); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id11, 'small' ); ?>" alt="<?php echo get_the_title($post_id11); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id11); ?></h2>
 		</a></li> 
         
         
             <li class="product-category product" id="cat12">
-	<a href="<?php echo get_the_permalink($post_id12); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id12, 'small' ); ?>" alt="<?php echo get_the_title($post_id12); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id12); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id12); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id12, 'small' ); ?>" alt="<?php echo get_the_title($post_id12); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id12); ?></h2>
 		</a></li> 
         
             <li class="product-category product" id="cat13">
-	<a href="<?php echo get_the_permalink($post_id13); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id13, 'small' ); ?>" alt="<?php echo get_the_title($post_id13); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id13); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id13); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id13, 'small' ); ?>" alt="<?php echo get_the_title($post_id13); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id13); ?></h2>
 		</a></li> 
         
            <li class="product-category product" id="cat14">
-	<a href="<?php echo get_the_permalink($post_id14); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id14, 'small' ); ?>" alt="<?php echo get_the_title($post_id14); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id14); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id14); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id14, 'small' ); ?>" alt="<?php echo get_the_title($post_id14); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id14); ?></h2>
 		</a></li> 
         
                   <li class="product-category product last" id="cat15">
-	<a href="<?php echo get_the_permalink($post_id15); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id15, 'small' ); ?>" alt="<?php echo get_the_title($post_id15); ?>" width="300" height="300" scale="0"><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id15); ?></h2>
+	<a href="<?php echo get_the_permalink($post_id15); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post_id15, 'small' ); ?>" alt="<?php echo get_the_title($post_id15); ?>" width="300" height="300" ><h2 class="woocommerce-loop-category__title"><?php echo get_the_title($post_id15); ?></h2>
 		</a></li> 
         
         
