@@ -35,7 +35,7 @@ get_header();  ?>
             
             $catname = get_field( "cat_products" );
             
-            echo do_shortcode('[products columns="5" orderby="id" order="DESC" category="'.$catname.'"]')
+            echo do_shortcode('[products columns="4" orderby="date" order="DESC" category="'.$catname.'"]')
             
             
 ?>

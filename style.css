@@ -94,9 +94,6 @@ font-size:1.25em;
 font-weight:300;
 margin-bottom:0;
 color:#3d3d3d;
-overflow:hidden;
-text-overflow:ellipsis;
-white-space:pre-line
 }
 
 ul.products li.product.product-category .woocommerce-loop-category__title,ul.products li.product.product-category h2,ul.products li.product.product-category h3 {
