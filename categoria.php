@@ -35,7 +35,7 @@ get_header();  ?>
             
             $catname = get_field( "cat_products" );
             
-            echo do_shortcode('[products columns="4" category="'.$catname.'"]')
+            echo do_shortcode('[products columns="5" orderby="id" order="DESC" category="'.$catname.'"]')
             
             
 ?>
@@ -54,12 +54,6 @@ get_header();  ?>
 the_content();
 endwhile; else: ?>
                         <p>Sorry, no posts matched your criteria.</p>
-
-
-
-
-
-
                         <?php endif; ?>
 
                     </div>
@@ -74,9 +68,6 @@ endwhile; else: ?>
             <!-- INTERLINKING -->
             
              
-              
-            
-                  
                 <?php if( have_rows('rep-interlinking') ): ?>
             
             <h2 class="category-heading2 text-center">
