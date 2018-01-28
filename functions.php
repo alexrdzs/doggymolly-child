@@ -91,3 +91,11 @@ function new_loop_shop_per_page( $cols ) {
   return $cols;
 }
 
+
+//* EXTERNAL LINK *//
+remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+add_action( 'woocommerce_before_shop_loop_item', 'mycode_woocommerce_template_loop_product_link_open', 20 );
+function mycode_woocommerce_template_loop_product_link_open() {
+    global $product;
+    echo '<a rel="nofollow" href="' . esc_url( $product->add_to_cart_url() ) . '" class="woocommerce-LoopProduct-link" data-quantity="'.esc_attr( isset( $quantity ) ? $quantity : 1 ).'" data-product_id="'.esc_attr( $product->id ).'" data-product_sku="'.esc_attr( $product->get_sku() ).'" target="_blank">';
+}
