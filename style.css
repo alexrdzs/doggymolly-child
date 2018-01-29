@@ -57,17 +57,13 @@ padding:0
 height:450px
 }
 
-.view-products-button span {
-font-weight:400;
-letter-spacing:2px
-}
 
 button,input[type="button"],input[type="reset"],input[type="submit"],.button,.added_to_cart,.widget a.button,.site-header-cart .widget_shopping_cart a.button {
 font-weight:600;
 border-radius:5px
 }
 
-h1,h2,h3,.widget-title,.order-total,.wc-proceed-to-checkout,.count {
+h1,h2, h3,.widget-title,.order-total,.wc-proceed-to-checkout,.count {
 font-family:'Fredoka One',cursive!important
 }
 
@@ -86,9 +82,8 @@ font-size:2.5em
 
 ul.products li.product .woocommerce-loop-product__title,ul.products li.product h3 {
 font-size:1.25em;
-font-weight:300;
-margin-bottom:0;
-color:#3d3d3d
+height: 55px;
+overflow-y: hidden;
 }
 
 ul.products li.product.product-category .woocommerce-loop-category__title,ul.products li.product.product-category h2,ul.products li.product.product-category h3 {
@@ -183,7 +178,7 @@ border-bottom:1px solid #abab
 
 .entry-title {
 line-height:1em;
-margin-bottom:0
+margin-bottom:0px;
 }
 
 .entry-content,.entry-content img {
@@ -210,8 +205,12 @@ line-height:40px
 color:#000
 }
 
-.single-product div.product p.price {
-font-weight:700
+.price {
+color:#146eb4 !important;
+margin-top: 10px;
+font-size: 1.5em;
+font-weight:400;
+font-family:'Fredoka One',cursive!important;
 }
 
 div.woocommerce-cart-tab.woocommerce-cart-tab--has-contents,span.woocommerce-cart-tab__contents,a.button.checkout.wc-forward {

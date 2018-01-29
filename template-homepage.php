@@ -15,7 +15,7 @@
 
  <div class="jumbotron hero-image">
         <div class="center-block ">                  
-            <h1 class="text-center">The best gift shop for dog lovers.</h1>
+            <h1 class="text-center">Welcome to the best gift shop for dog lovers!</h1>
         </div>
     </div>
 
@@ -162,7 +162,7 @@
 				<div class="sp-section-description">
 					<p>This is the best of the best, the cutest, the coolest, just pure awesomeness for dog lovers.</p>
 				</div>                
-                <?php echo do_shortcode('[featured_products columns="5" orderby="title" order="ASC"]') ?>
+                <?php echo do_shortcode('[featured_products columns="4" orderby="date" order="ASC"]') ?>
 			</div>
 		</div>
 	</section>

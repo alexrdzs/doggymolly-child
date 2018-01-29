@@ -70,3 +70,11 @@ function mycode_woocommerce_template_loop_product_link_open() {
     global $product;
     echo '<a rel="nofollow" href="' . esc_url( $product->add_to_cart_url() ) . '" class="woocommerce-LoopProduct-link" data-quantity="'.esc_attr( isset( $quantity ) ? $quantity : 1 ).'" data-product_id="'.esc_attr( $product->id ).'" data-product_sku="'.esc_attr( $product->get_sku() ).'" target="_blank">';
 }
+
+/**
+ * Removes the "Buy" button from list of products (ex. category pages).
+ */
+add_action( 'woocommerce_after_shop_loop_item', 'mycode_remove_add_to_cart_buttons', 1 );
+function mycode_remove_add_to_cart_buttons() {
+    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
+}
