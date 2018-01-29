@@ -48,11 +48,6 @@ add_action( 'storefront_header', 'jk_storefront_header_content', 40 );
     <?php
 	}
 
-/* Remove search from header */
-add_action( 'init', 'remove_storefront_header_search' );
-function remove_storefront_header_search() {
-	remove_action( 'storefront_header', 'storefront_product_search', 	40 );
-}
 
 
 /** Cambios del menú en mobile **/
@@ -60,37 +55,13 @@ function remove_storefront_header_search() {
 add_filter( 'storefront_handheld_footer_bar_links', 'jk_remove_handheld_footer_links' );
 function jk_remove_handheld_footer_links( $links ) {
 	unset( $links['my-account'] );
-	
+	unset( $links['cart'] );
 	return $links;
 }
 
 
-
 /*** Esconde el contador de productos **/
 add_filter( 'woocommerce_subcategory_count_html', '__return_null' );
-
-        
-/* Define cuántas categorías se ven en el homepage */
-add_filter( 'storefront_product_categories_args', 'tdmm_storefront_product_categories', 199 );
- 
-function tdmm_storefront_product_categories( $args ) {
- $args['limit']   = 20;
- $args['columns'] = 5;
- $args['hide_empty'] = 0;
- 
- return $args;
-}
-
-
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
-function new_loop_shop_per_page( $cols ) {
-  // $cols contains the current number of products per page based on the value stored on Options -> Reading
-  // Return the number of products you wanna show per page.
-  $cols = 9;
-  return $cols;
-}
-
 
 //* EXTERNAL LINK *//
 remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
