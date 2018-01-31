@@ -44,7 +44,7 @@ width:100%
 }
 
 .woocommerce-active .site-header .main-navigation {
-width:70%
+width:100%
 }
 
 .col-full {
@@ -75,6 +75,9 @@ p,li {
 font-size:1.25em
 }
 
+.site-header-cart {
+    display: none !important;
+}
 
 .featurette-heading {
 font-size:2.5em

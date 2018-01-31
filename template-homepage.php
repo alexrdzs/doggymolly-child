@@ -166,6 +166,23 @@
 			</div>
 		</div>
 	</section>
+    
+    <section class="storefront-product-section storefront-moreinfo" aria-label="After Instagram">
+
+    <div class="row featurette">
+                    <div class="col-md-7 col-md-push-5">
+                        <h2 class="featurette-heading">
+                            <?php the_field('titulo_seccion_secundaria'); ?></h2>
+                            <h3 class="text-muted morado">
+                                <?php the_field('subtitulo_seccion_secundaria'); ?></h3>
+                       
+                        <p class="lead"><?php the_field('texto_secundario');?></p>
+                    </div>
+                    <div class="col-md-5 col-md-pull-7">
+                        <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_secundaria');?>" alt="<?php the_field('descripcion_imagen_secundaria'); ?>" height="280" width="280">
+                    </div>
+                </div>
+    </section>
 
     
     <div class="clearfix"></div>
@@ -228,22 +245,7 @@
 	</div>
 </section>
    
-<section class="storefront-product-section storefront-moreinfo" aria-label="After Instagram">
 
-    <div class="row featurette">
-                    <div class="col-md-7 col-md-push-5">
-                        <h2 class="featurette-heading">
-                            <?php the_field('titulo_seccion_secundaria'); ?></h2>
-                            <h3 class="text-muted morado">
-                                <?php the_field('subtitulo_seccion_secundaria'); ?></h3>
-                       
-                        <p class="lead"><?php the_field('texto_secundario');?></p>
-                    </div>
-                    <div class="col-md-5 col-md-pull-7">
-                        <img class="featurette-image img-responsive center-block" src="<?php the_field('imagen_secundaria');?>" alt="<?php the_field('descripcion_imagen_secundaria'); ?>" height="280" width="280">
-                    </div>
-                </div>
-    </section>
     
 <div class="row featurette">
 	<div class="col-md-7" style="padding:25px;">

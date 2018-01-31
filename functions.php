@@ -78,3 +78,9 @@ add_action( 'woocommerce_after_shop_loop_item', 'mycode_remove_add_to_cart_butto
 function mycode_remove_add_to_cart_buttons() {
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 }
+
+
+/** FORCE CSS **/
+// Version CSS file in a theme
+wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+?>
