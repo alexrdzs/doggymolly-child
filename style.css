@@ -51,6 +51,7 @@ width:100%
 max-width:1096px;
 padding:0
 }
+    
 }
 
 .front-page-main-image {
@@ -147,7 +148,6 @@ background-position:center;
 background-repeat:no-repeat;
 background-size:cover;
 position:relative;
-margin: 0px -50%;
 }
 
 .hero-text {

@@ -25,11 +25,6 @@ function sf_child_theme_dequeue_style() {
 
 /*** BOOTSTRAP ***/
 
-function pwwp_enqueue_my_scripts() {
-    // jQuery is stated as a dependancy of bootstrap-js - it will be loaded by WordPress before the BS scripts 
-    wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), true); // all the bootstrap javascript goodness
-}
-add_action('wp_enqueue_scripts', 'pwwp_enqueue_my_scripts');
 
 function pwwp_enqueue_my_styles() {
     wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
@@ -37,8 +32,6 @@ function pwwp_enqueue_my_styles() {
  // this will add the stylesheet from it's default theme location if your theme doesn't already //wp_enqueue_style( 'my-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'pwwp_enqueue_my_styles');
-
-/*******************************************************************************/
 
 
     /* IMPORT GOOGLE FONTS */
@@ -48,6 +41,13 @@ add_action( 'storefront_header', 'jk_storefront_header_content', 40 );
     <?php
 	}
 
+function pwwp_enqueue_my_scripts() {
+    // jQuery is stated as a dependancy of bootstrap-js - it will be loaded by WordPress before the BS scripts 
+    wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), true); // all the bootstrap javascript goodness
+}
+add_action('wp_enqueue_scripts', 'pwwp_enqueue_my_scripts');
+
+/*******************************************************************************/
 
 
 /** Cambios del menú en mobile **/
@@ -78,9 +78,3 @@ add_action( 'woocommerce_after_shop_loop_item', 'mycode_remove_add_to_cart_butto
 function mycode_remove_add_to_cart_buttons() {
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 }
-
-
-/** FORCE CSS **/
-// Version CSS file in a theme
-wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
-?>
