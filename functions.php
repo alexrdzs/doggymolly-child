@@ -78,3 +78,20 @@ add_action( 'woocommerce_after_shop_loop_item', 'mycode_remove_add_to_cart_butto
 function mycode_remove_add_to_cart_buttons() {
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 }
+
+
+/*** Sección abajo del Header 
+function tdmm_storefront_homepage_slider() {
+ 
+    // if not the StoreFront Homepage Page Template return false
+    if ( ! is_page_template( 'template-homepage.php' ) ) {
+ 
+        return false;
+ 
+    }
+
+   echo do_shortcode("[metaslider id=6843 percentwidth=100]");
+ 
+}
+add_action( 'storefront_before_content', 'tdmm_storefront_homepage_slider', 5 );
+***/
