@@ -1,14 +1,14 @@
 <?php
+/**
+ * Template de categorías.
+ *
  * 
-   /**
-    * Template de categorías.
-    *
-    * 
-    * Template name: Categoría
-    *
-    * @package storefront
-    */
-   get_header();  ?>
+ * Template name: Categoría
+ *
+ * @package storefront
+ */
+get_header();  ?>
+
 <div id="primary" class="content-area">
    <main id="main" class="site-main" role="main">
        
