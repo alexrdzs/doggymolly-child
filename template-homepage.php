@@ -18,7 +18,7 @@
     
 <div class="site-main">
 	
-    <h1 class="home-heading text-center">Welcome to the best gift shop for dog lovers!</span></h1>
+    <h1 class="home-heading text-center">Welcome to the best gift shop for dog lovers!</h1>
     
 	<div class="clearfix"></div>
 	<section class="storefront-product-section" aria-label="Best Friends">
@@ -28,132 +28,14 @@
 				<div class="sp-section-description morado">
 					<p>We know you are a true dog lover, but let's be honest, there's one breed you really, really, reaaaaally love. Good news is we've got something for everyone!</p>
 				</div>
-				<div class="woocommerce columns-5">
-					<ul class="products">
-						<?php 
-							// vars
-							$post_id1 = get_field('url1', false, false);
-							$post_id2 = get_field('url2', false, false);
-							$post_id3 = get_field('url3', false, false);
-							$post_id4 = get_field('url4', false, false);
-							$post_id5 = get_field('url5', false, false);
-							
-							$post_id6 = get_field('url6', false, false);
-							$post_id7 = get_field('url7', false, false);
-							$post_id8 = get_field('url8', false, false);
-							$post_id9 = get_field('url9', false, false);
-							$post_id10 = get_field('url10', false, false);
-							                                      
-							$post_id11 = get_field('url11', false, false);
-							$post_id12 = get_field('url12', false, false);
-							$post_id13 = get_field('url13', false, false);
-							$post_id14 = get_field('url14', false, false);
-							$post_id15 = get_field('url15', false, false);
-							
-							                                      
-							// check 
-							if( $post_id1 ): ?>
-						<li class="product-category product homeimg first" id="cat1">
-							<a href="<?php echo get_the_permalink($post_id1); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id1, 'small' ); ?>" alt="<?php echo get_the_title($post_id1); ?>" >
-								<h2 class="front-section"><?php echo get_the_title($post_id1); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat2">
-							<a href="<?php echo get_the_permalink($post_id2); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id2, 'small' ); ?>" alt="<?php echo get_the_title($post_id2); ?>">
-								<h2 class="front-section"><?php echo get_the_title($post_id2); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat3">
-							<a href="<?php echo get_the_permalink($post_id3); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id3, 'small' ); ?>" alt="<?php echo get_the_title($post_id3); ?>" >
-								<h2 class="front-section"><?php echo get_the_title($post_id3); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat4">
-							<a href="<?php echo get_the_permalink($post_id4); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id4, 'small' ); ?>" alt="<?php echo get_the_title($post_id4); ?>" >
-								<h2 class="front-section"><?php echo get_the_title($post_id4); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg last" id="cat5">
-							<a href="<?php echo get_the_permalink($post_id5); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id5, 'small' ); ?>" alt="<?php echo get_the_title($post_id5); ?>" >
-								<h2 class="front-section"><?php echo get_the_title($post_id5); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg first" id="cat6">
-							<a href="<?php echo get_the_permalink($post_id6); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id6, 'small' ); ?>" alt="<?php echo get_the_title($post_id6); ?>" >
-								<h2 class="front-section"><?php echo get_the_title($post_id6); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat7">
-							<a href="<?php echo get_the_permalink($post_id7); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id7, 'small' ); ?>" alt="<?php echo get_the_title($post_id7); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id7); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat8">
-							<a href="<?php echo get_the_permalink($post_id8); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id8, 'small' ); ?>" alt="<?php echo get_the_title($post_id8); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id8); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat9">
-							<a href="<?php echo get_the_permalink($post_id9); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id9, 'small' ); ?>" alt="<?php echo get_the_title($post_id9); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id9); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg last" id="cat10">
-							<a href="<?php echo get_the_permalink($post_id10); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id10, 'small' ); ?>" alt="<?php echo get_the_title($post_id10); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id10); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg first" id="cat11">
-							<a href="<?php echo get_the_permalink($post_id11); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id11, 'small' ); ?>" alt="<?php echo get_the_title($post_id11); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id11); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat12">
-							<a href="<?php echo get_the_permalink($post_id12); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id12, 'small' ); ?>" alt="<?php echo get_the_title($post_id12); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id12); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat13">
-							<a href="<?php echo get_the_permalink($post_id13); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id13, 'small' ); ?>" alt="<?php echo get_the_title($post_id13); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id13); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg" id="cat14">
-							<a href="<?php echo get_the_permalink($post_id14); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id14, 'small' ); ?>" alt="<?php echo get_the_title($post_id14); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id14); ?></h2>
-							</a>
-						</li>
-						<li class="product-category product homeimg last" id="cat15">
-							<a href="<?php echo get_the_permalink($post_id15); ?>">
-								<img class="img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $post_id15, 'small' ); ?>" alt="<?php echo get_the_title($post_id15); ?>"  >
-								<h2 class="front-section"><?php echo get_the_title($post_id15); ?></h2>
-							</a>
-						</li>
-                        
-						<?php endif; ?>
-					</ul>
-<div class="text-center">  <a class="button homebutton" href="./shop" rel="nofollow">View All</a> </div>
+				
+                <div>
+                <?php echo do_shortcode("[pt_view id=b4baea8mhp]"); ?>
+                    <br>
+<div class="text-center">  <a class="button homebutton" href="./all-our-breeds" rel="nofollow">View All</a> </div>
                     
                     
 				</div>
-                
-                        
-                
-                
                 
 			</div>
 		</div>
