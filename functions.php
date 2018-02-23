@@ -23,6 +23,12 @@ function sf_child_theme_dequeue_style() {
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
 
+
+ function scripts_to_footer() { wp_enqueue_script( 'my-scripts', get_template_directory_uri() . '/js/scripts.min.js', array( 'jquery' ), '', true ); } add_action( 'wp_enqueue_scripts', 'scripts_to_footer' ); 
+
+
+ function move_scripts_from_head_to_footer() { remove_action( 'wp_head', 'wp_print_scripts' ); remove_action( 'wp_head', 'wp_print_head_scripts', 9 ); remove_action( 'wp_head', 'wp_enqueue_scripts', 1 ); add_action( 'wp_footer', 'wp_print_scripts', 5); add_action( 'wp_footer', 'wp_enqueue_scripts', 5); add_action( 'wp_footer', 'wp_print_head_scripts', 5); } add_action('wp_enqueue_scripts', 'move_scripts_from_head_to_footer'); 
+
 /*** BOOTSTRAP ***/
 
 
