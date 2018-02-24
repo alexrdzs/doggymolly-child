@@ -75,14 +75,14 @@ get_header();  ?>
             $linkint = get_sub_field('url_link', false, false);
             
             ?>
-         <div class="col-md-4">
+         <div class="col-md-2">
             <?php if( $linkint ): ?>
             <a href="<?php echo get_the_permalink($linkint); ?>">
                <?php endif; ?>
-               <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $linkint, 'small' ); ?>" alt="Let's go to the <?php echo get_the_title($linkint); ?> section." title="<?php echo get_the_title($linkint); ?>" width="120" height="120" style="margin-bottom: 20px;">  
-               <h3 class="center-block text-center"><?php echo get_the_title($linkint); ?></h3>
+               <img class="img-circle img-thumbnail img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( $linkint, 'small' ); ?>" alt="Let's go to the <?php echo get_the_title($linkint); ?> section." title="<?php echo get_the_title($linkint); ?>" style="margin-bottom: 20px;">  
+               <h3 class="text-center"><?php echo get_the_title($linkint); ?></h3>
             </a>
-            <p class="center-block text-center"><?php echo $content; ?></p>
+            <p class="text-center"><?php echo $content; ?></p>
             <?php if( $linkint ): ?>
             <?php endif; ?>
          </div>
