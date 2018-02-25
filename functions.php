@@ -59,7 +59,6 @@ function jk_remove_handheld_footer_links( $links ) {
 	return $links;
 }
 
-
 /*** Esconde el contador de productos **/
 add_filter( 'woocommerce_subcategory_count_html', '__return_null' );
 
@@ -78,20 +77,10 @@ add_action( 'woocommerce_after_shop_loop_item', 'mycode_remove_add_to_cart_butto
 function mycode_remove_add_to_cart_buttons() {
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 }
-
-
-/*** Sección abajo del Header 
-function tdmm_storefront_homepage_slider() {
- 
-    // if not the StoreFront Homepage Page Template return false
-    if ( ! is_page_template( 'template-homepage.php' ) ) {
- 
-        return false;
- 
-    }
-
-   echo do_shortcode("[metaslider id=6843 percentwidth=100]");
- 
+//Quitar las query strings from statics resources
+function _remove_script_version( $src ){
+$parts = explode( '?ver', $src );
+return $parts[0];
 }
-add_action( 'storefront_before_content', 'tdmm_storefront_homepage_slider', 5 );
-***/
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
