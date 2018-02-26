@@ -18,15 +18,15 @@
     
 <div class="site-main">
 	
-    <h1 class="home-heading text-center">Welcome to the best gift shop for dog lovers!</h1>
+    <h1 class="home-heading text-center"><?php the_field('main_title'); ?></h1>
     
 	<div class="clearfix"></div>
 	<section class="storefront-product-section" aria-label="Best Friends">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="section-title">Who is your best friend?</h2>
+				<h2 class="section-title"><?php the_field('title_section_1'); ?></h2>
 				<div class="sp-section-description morado">
-					<p>We know you are a true dog lover, but let's be honest, there's one breed you really, really, reaaaaally love. Good news is we've got something for everyone!</p>
+					<p><?php the_field('description_section_1'); ?></p>
 				</div>
 				
                 <div>
@@ -45,9 +45,9 @@
 	<section class="storefront-product-section" aria-label="Featured Products">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="section-title morado">Best Dog Lover Gifts</h2>
+				<h2 class="section-title morado"><?php the_field('title_featured'); ?></h2>
 				<div class="sp-section-description">
-					<p>This is the best of the best, the cutest, the coolest, just pure awesomeness for dog lovers.</p>
+					<p><?php the_field('description_featured'); ?></p>
 				</div>                
                 <?php echo do_shortcode('[featured_products limit="5" columns="5" orderby="date" order="ASC"]') ?>
                 <?php echo do_shortcode('[products limit="5" columns="5" orderby="date"  on_sale="false" ]
@@ -78,7 +78,7 @@
 
     <div class="clearfix"></div>
  <div class="storefront-product-section storefront-blog columns-3">
-     <h2 class="section-title">The Doggy Molly Digest</h2>
+     <h2 class="section-title"><?php the_field('blog_title'); ?></h2>
      <div class="sp-section-description">
          
 				</div>
@@ -150,6 +150,21 @@
 		<img class="featurette-image img-thumbnail img-responsive center-block" src="<?php the_field('imagen_final');?>" alt="<?php the_field('descripcion_imagen_final');?>">
 	</div>
 </div>
+    
+    <div class="row">
+         <div class="col-md-12 content-category">
+                   <hr class="featurette-divider">
+
+            <div>
+               <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+                  the_content();
+                  endwhile; else: ?>
+               <p>Sorry, no posts matched your criteria.</p>
+               <?php endif; ?>
+            </div>
+         </div>
+      </div>
+    
     </div>
 <!-- #primary -->
 <?php
