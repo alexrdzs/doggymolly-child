@@ -79,7 +79,7 @@ function mycode_remove_add_to_cart_buttons() {
 }
 //Quitar las query strings from statics resources
 function _remove_script_version( $src ){
-$parts = explode( '?ver', $src );
+$parts = explode( '?', $src );
 return $parts[0];
 }
 add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
